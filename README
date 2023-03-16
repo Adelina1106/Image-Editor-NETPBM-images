@@ -1,0 +1,42 @@
+Rizea Adelina-Maria
+
+->Pentru functia de LOAD am alocat dinamic o matrice de tip unsigned char ce 
+retine pixelii imaginii cu dimensiunile specifice tipului primit, citind
+din fisier valorile pe care  le-am pus in aceasta. In cazul intalnirii
+comenzii LOAD, verific daca o imagine a fost deja incarcata pentru a elibera
+memoria.
+
+->Pentru functia de SELECT am retinut valorile date in campurile unei structuri
+ce retine informatii despre imaginea incarcata, dandu-le aceste valori prin
+intarmediul unei functii ce verifica si cazul in care ne aflam. Intr-o alta
+functie am verificat daca toata imaginea va fi selectata sau doar o zona a
+acesteia, caz in care apelez functia SELECT. 
+
+->Pentru ROTATE am facut cate o functie pentru rotirea unei zone din interiorul
+imaginii pentru P2, P5 si pentru P3, P6 si cate o functie pentru rotirea
+intregii imagini, de asemenea pentru P2, P5 si P3, P6. Pentru rotirea unei zone
+patrate am retinut intr-o noua matrice alocata dinamic zona ce trebuie rotita,
+am realizat modificarea acesteia prin interschimbarea elementelor si am
+introdus-o in vechea matrice. Pentru rotirea imaginii complete am alocat
+dinamic o matrice in care am retinut-o pe cea veche si am parcurs-o astfel
+incat aceasta sa devina transpusa imaginii initiale. Am facut o functie ce
+tinand cont de gradul primit si de tipul imaginii, apeleaza aceste functii
+pana obtine imaginea dorita.
+
+->Pentru CROP am facut 2 functii, una pentru imaginile P2,P5 si una pentru P3,
+P6 in care am alocat dinamic o noua matrice ce retine zona imaginii ce
+trebuie pastrata. Dupa alocarea conform noilor dimensiuni a vechii matrici,
+am pus aceasta zona inapoi in vechea matrice, aceasta avand noile dimensiuni
+corespunzatoare. 
+
+->Pentru SAVE am deschis fisierul dat si am facut cate o functie pentru
+scrierea text si scrierea binara a matricii prelucrate in fisierul dat.Am facut
+inca o functie pentru interpretarea tipului de salvare dorita, aceasta apeland
+functiile precedente.
+
+->Pentru GRAYSCALE am facut o functie ce calculeaza noile valori ale pixelilor,
+modificand aceste valori in matrice, cate o culoare pe fiecare coloana.
+
+->Pentru SEPIA am calculat intr-o functie noile valori ale pixelilor dupa
+formula corespunzatoare, am rotunjit valorea si am pus noile valori in matricea
+ce retine pixelii imaginii.
